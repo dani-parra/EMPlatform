@@ -19,5 +19,6 @@ The main implementations that are queued to be implemented in the project are:
  * Queue tool like rabbit or other (to define).
  * Push notifications with a provider like onesignal in free tier (to define).
  * Improve the security implemented to the services in the first version.
+ * Separate the project modules in multiple services
  
  
