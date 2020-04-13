@@ -1,0 +1,16 @@
+{
+  "name": "temporal-api-orchestrator",
+  "version": "1.0.0",
+  "description": "a service developed to center the front end requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "author": "parradafe",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

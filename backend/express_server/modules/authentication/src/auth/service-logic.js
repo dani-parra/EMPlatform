@@ -1,51 +1,39 @@
 let service = {};
 const repository = require('./implementation/implementation-interface');
 
-service.login = (req, res) => {
-    repository.login().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.login = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
-service.logout = (req, res) => {
-    repository.logout().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.logout = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
-service.refreshToken = (req, res) => {
-    repository.refreshToken().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.refreshToken = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
-service.newRecoveryToken = (req, res) => {
-    repository.newRecoveryToken().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.newRecoveryToken = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
-service.validRecoveryToken = (req, res) => {
-    repository.validRecoveryToken().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.validRecoveryToken = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
-service.updatePassword = (req, res) => {
-    repository.updatePassword().then(res => {
-        res.status(200).send(res);
-    }).catch(err => {
-        res.send(400).send({error : err});
+service.updatePassword = () => {
+    return new Promise((resolve, reject) => {
+
     });
 };
 
