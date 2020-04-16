@@ -26,59 +26,57 @@ The main implementations that are queued to be implemented in the project are:
  
   - In this moment the services are exposed throught ngrok, that create a tunnel to localhost and provides a public url.
 
-  - To execute the multiple services the entire ecosystem, i use the wmctrl xdotool packages, following the following [tutorial]
-  (https://askubuntu.com/questions/641683/how-can-i-send-commands-to-specific-terminal-windows)
+  - To execute the multiple services the entire ecosystem, i use the wmctrl xdotool packages, following the following [tutorial](https://askubuntu.com/questions/641683/how-can-i-send-commands-to-specific-terminal-windows)
 
-  ### Thanks to **Jacob Vlijm**, that provided this solution, it's amazing and helped me a lot.
+  ##### Thanks to **Jacob Vlijm**, that provided this solution, it's amazing and helped me a lot.
 
-  #### if the link above doesn't show any info i will explain the process summary...
+  ##### if the link above doesn't show any info i will explain the process summary...
 
   Acording to this tutorial, is neccesary to install some packages with this command.
 
-  ´´´
+  ```
   sudo apt-get install wmctrl xdotool
-  ´´´
+  ```
 
   I use the gnome-terminal so i need to install this adding a new repository to get the packages required.
 
-  i follow this [guideline] to install that
-  (https://www.techrepublic.com/blog/linux-and-open-source/how-to-install-gnome-38-on-ubuntu/)
+  i follow this [guideline](https://www.techrepublic.com/blog/linux-and-open-source/how-to-install-gnome-38-on-ubuntu/) to install that
 
   so i execute the following commands
 
-  ´´´
+  ```
   sudo add-apt-repository ppa:gnome3-team/gnome3
   sudo apt-get update && sudo apt-get install gnome-shell ubuntu-gnome-desktop
-  ´´´
+  ```
 
   Later i add the file ** command_terminals_handler ** stored in the /server folder in the ~/bin folder and execute: (for some reason, only works for me when the file was in the desktop folder)
 
-  ´´´
+  ```
   sudo cp /home/user/Desktop/command_terminals_handler /bin
-  ´´´
+  ```
 
   If you see the file doesn't have extension so to convert this file on a executable file it's neccesary to execute:
 
-  ´´´
+  ```
   source ~/.profile
 
   sudo chmod +x command_terminals_handler
-  ´´´
+  ```
 
   If the process was completed sucessfully, the behavior of the string is: 
 
    - to create multiple terminals, execute: 
 
-   ´´´
+  ```
    sudo command_terminals_handler -set (numeric amount of terminals) --> 2
 
-   ´´´
+  ```
 
    - to send a command to a specific terminal, execute:
 
-   ´´´
+  ```
     command_terminals_handler -run (terminal number) --> 1 (command) --> echo "message"
-   ´´´
+  ```
 
 
 
