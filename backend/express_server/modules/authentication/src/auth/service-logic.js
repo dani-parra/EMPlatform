@@ -2,9 +2,14 @@ let service = {};
 const bcrypt = require('bcrypt');
 const repository = require('./implementation/implementation-interface');
 
-service.login = () => {
+service.login = body => {
     return new Promise((resolve, reject) => {
-
+        /** validate user password */
+        repository.validatePassword(body.password).then(res => {
+            
+        }).catch(err => {
+            reject(err);
+        });
     });
 };
 

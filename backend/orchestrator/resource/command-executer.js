@@ -2,7 +2,6 @@ const { exec } = require("child_process");
 const path = require("path");
 
 exports.run = async () => {
-  let promisesArray = [];
   /** set the path for the server */
   let executionDirectoryPath = path.resolve(
     process.cwd(),
@@ -15,7 +14,7 @@ exports.run = async () => {
 
   /** Step 1- generate the terminals */
   await generateTerminals(1, executionDirectoryPath);
-  promisesArray.push(startExposeTunnel(executionDirectoryPath));
+  await startExposeTunnel(executionDirectoryPath);
 
   /** Step 2- run the express and java servers */
   /** set the path for the server */
