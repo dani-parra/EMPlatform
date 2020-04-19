@@ -1,4 +1,5 @@
 let service = {};
+const bcrypt = require('bcrypt');
 const repository = require('./implementation/implementation-interface');
 
 service.login = () => {

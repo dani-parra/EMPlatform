@@ -4,7 +4,7 @@ const implementations = {
     mysql_native: repository
 };
 
-service.login = () => {
+service.validatePassword = () => {
     return new Promise((resolve, reject) => {
 
     });
