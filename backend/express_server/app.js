@@ -1,4 +1,5 @@
 const express = require('express');
+global.db.dbpools = require('./db/singletonPool');
 let app = express();
 
 /** modules routes imports */

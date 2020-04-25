@@ -1,12 +1,12 @@
 let service = {};
-const repository = require('./mysql-native');
+const repository = require('./mysql');
 const implementations = {
     mysql_native: repository
 };
 
-service.validatePassword = () => {
+service.validatePassword = data => {
     return new Promise((resolve, reject) => {
-
+        implementations.mysql_native.validatePassword()
     });
 };
 

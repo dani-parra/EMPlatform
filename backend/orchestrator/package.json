@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "run test",
-    "start": "nodemon index.js"
+    "start": "PORT=8282 SERVER_APP='./ngrok' SERVER_RUNNER_PATH='../../../' EXPRESS_SERVER_PATH='../../express_server' EXPRESS_SERVER_PORT=8082 JAVA_SERVER_PATH='../../spring_server' nodemon index.js"
   },
   "author": "parradafe",
   "license": "ISC",
