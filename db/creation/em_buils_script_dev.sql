@@ -14,6 +14,13 @@ create table Country(
     PRIMARY KEY(id)
 );
 
+create table Role(
+    id varchar(2),
+    roleName varchar(20),
+
+    PRIMARY KEY(id)
+);
+
 create table EMUser(
     userId varchar(50) NOT NULL,
     identification varchar(30) NOT NULL,

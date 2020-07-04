@@ -1,6 +1,6 @@
 const statement = {
-    insertActivity : `INSERT INTO Activity(UserUUID, Latitude, Longitude, GeoGranted, CameraGranted, CreatedAt) VALUES (?,?,?,?,?,now())`,
-    getUserInfo : `SELECT password FROM Account WHERE email=? ;`
+    getUserInfo : `SELECT password FROM Account WHERE email=? ;`,
+    saveNewSale : `INSERT INTO Sale(productId, amount, sellerId, buyerId, saleDate) VALUES(?,?,?,?,?)`
 };
 
 module.exports = statement;
