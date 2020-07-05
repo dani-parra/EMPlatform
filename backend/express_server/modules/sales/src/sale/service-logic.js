@@ -3,7 +3,12 @@ const repository = require('./implementation/implementation-interface');
 
 service.register = body => {
     return new Promise((resolve, reject) => {
-        repository.register(body).then(res => {
+
+        // set the saleId
+        let id = `${body.productId}-${body.buyerId}-${new Date().getTime()}`
+        let newBody = {saleId : id, ...newBody};
+
+        repository.register(newBody).then(res => {
             resolve(res);
         }).catch(err => {
             reject(err);
