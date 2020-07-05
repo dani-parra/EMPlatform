@@ -13,4 +13,9 @@ functions.decompose = token => {
     
 }
 
-module.exports = functions;
+functions.removeLastElements = (string, index) => {
+    return string.substring(0,string.length - index);
+}
+
+global.sharedFunctions = {};
+global.sharedFunctions = functions;

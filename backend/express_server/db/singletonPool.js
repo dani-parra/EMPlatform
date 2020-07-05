@@ -1,4 +1,4 @@
-/** local varaibles */
+/** local variables */
 var mysql = require('mysql');
 var pool = mysql.createPool({
     connectionLimit: process.env.POOL_SIZE,
@@ -9,4 +9,4 @@ var pool = mysql.createPool({
     database: process.env.DB_NAME
 });
 
-module.exports = pool;
+global.sharedFunctions.db.pool = pool;

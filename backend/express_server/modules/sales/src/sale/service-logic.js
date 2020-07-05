@@ -1,33 +1,43 @@
 let service = {};
-const bcrypt = require('bcrypt');
 const repository = require('./implementation/implementation-interface');
 
-service.registerSale = body => {
+service.register = body => {
     return new Promise((resolve, reject) => {
-        /** validate user password */
-        repository.registerSale(body).then(res => {
-            
+        repository.register(body).then(res => {
+            resolve(res);
         }).catch(err => {
             reject(err);
         });
     });
 };
 
-service.updateSale = body => {
+service.update = body => {
     return new Promise((resolve, reject) => {
-
+        repository.update(body).then(res => {
+            resolve(res);
+        }).catch(err => {
+            reject(err);
+        });
     });
 };
 
-service.getSale = body => {
+service.get = body => {
     return new Promise((resolve, reject) => {
-
+        repository.get(body).then(res => {
+            resolve(res);
+        }).catch(err => {
+            reject(err);
+        });
     });
 };
 
-service.deleteSale = body => {
+service.delete = body => {
     return new Promise((resolve, reject) => {
-
+        repository.delete(body).then(res => {
+            resolve(res);
+        }).catch(err => {
+            reject(err);
+        });
     });
 };
 

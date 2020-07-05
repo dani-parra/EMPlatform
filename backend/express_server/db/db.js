@@ -11,4 +11,5 @@ operations.getConnection = poolData => {
     });
 };
 
-module.exports = operations;
+global.sharedFunctions.db = {};
+global.sharedFunctions.db = operations;

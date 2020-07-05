@@ -1,7 +1,6 @@
 let repository = {};
 const bcrypt = require('bcrypt');
 const poolInstance = global.db.dbpools;
-const db = require('../../../../../db/db');
 const AuthenticationModel = require('../../../../../models/authentication');
 const jwt = require('../../../../../shared/shared');
 
