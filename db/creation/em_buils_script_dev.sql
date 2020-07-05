@@ -1,5 +1,6 @@
 use EMPlatform_dev;
 
+/** parameretized table to set the city main data */
 create table City(
     id int(5),
     value varchar(30),
@@ -7,6 +8,7 @@ create table City(
     PRIMARY KEY(id)
 );
 
+/** parameretized table to set the country main data */
 create table Country(
     id int(3),
     value varchar(30),
@@ -14,6 +16,7 @@ create table Country(
     PRIMARY KEY(id)
 );
 
+/** specify the user role (saler, buyer, admin, simpleUser) */
 create table Role(
     id varchar(2),
     roleName varchar(20),
@@ -21,6 +24,7 @@ create table Role(
     PRIMARY KEY(id)
 );
 
+/** main info about the users */
 create table EMUser(
     userId varchar(50) NOT NULL,
     identification varchar(30) NOT NULL,
@@ -39,6 +43,7 @@ create table EMUser(
     REFERENCES Country(id)
 );
 
+/** data about the way that the users access to the platform */
 create table Account(
     accountId varchar(50) NOT NULL,
     userId varchar(50) NOT NULL,
@@ -52,6 +57,7 @@ create table Account(
     REFERENCES EMUser(userId)
 );
 
+/** parameretized table to set the product main data */
 create table Product(
     productId int(3),
     description varchar(30),
@@ -59,6 +65,7 @@ create table Product(
     PRIMARY KEY (productId)
 );
 
+/**  one of the core tables to save the platform sales data */
 create table Sale(
     saleId varchar(40) NOT NULL,
     productId int(2),
@@ -77,6 +84,7 @@ create table Sale(
     
 );
 
+/** table designed to register wich materials are used to make the extrusion process */
 create table Material(
 	materialId int(2) NOT NULL,
     description varchar(30),
@@ -84,6 +92,7 @@ create table Material(
     PRIMARY KEY(materialId)
 );
 
+/** table designed to register data about a working day */
 create table Extrusion(
     id varchar(10) NOT NULL,
     extrusionDate date,
@@ -91,6 +100,7 @@ create table Extrusion(
     PRIMARY KEY(id)
 );
 
+/** table designed to register the amount of product made with the extrusion process in a day */
 create table PlasticRoll(
     id varchar(50) NOT NULL,
     weight varchar(5),
@@ -104,6 +114,7 @@ create table PlasticRoll(
     REFERENCES Extrusion(id)
 );
 
+/** table designed to register data about the clients related with the platform */
 create table EMClient(
     clientId varchar(30) NOT NULL,
     address varchar(60),
@@ -116,6 +127,7 @@ create table EMClient(
 
 
 -- ********************************* STEP 2 ******************************
+/** table designed to specify the materials used in a specific plastic-roll */
 create table Roll_Material(
 	id varchar(30),
 	rollId varchar(50),
@@ -130,6 +142,7 @@ create table Roll_Material(
     REFERENCES Material(materialId)
 );
 
+/** table designed to save the relation between a user and a client */
 create table Client_User_Owner(
 	id varchar(30),
 	clientId varchar(30),
