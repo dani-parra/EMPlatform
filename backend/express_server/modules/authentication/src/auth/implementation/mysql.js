@@ -1,26 +1,20 @@
 let repository = {};
 const bcrypt = require('bcrypt');
-const AuthenticationModel = require('../../../../../models/authentication');
-const jwt = require('../../../../../shared/shared');
+const AuthenticationModel = require('../models/authentication');
 
 /** imports section */
-/* repository.validatePassword = (data) => {
+repository.validatePassword = (connection, data) => {
     return new Promise((resolve, reject) => {
-        db.getConnection(poolInstance).then(connection => {
-            AuthenticationModel.validatePassword(connection, data.email).then(res => {
-                bcrypt.compare(res, process.env.BCRYPT_HASH_SALT).then(res => {
-                    jwt.generate()
-                });
-            }).catch(err => {
-                console.log('[ERROR IN THE QUERY METHOD INVOCATION]');
-                reject(err);
+        AuthenticationModel.validatePassword(connection, data.email).then(res => {
+            bcrypt.compare(res, process.env.BCRYPT_HASH_SALT).then(res => {
+                jwt.generate()
             });
         }).catch(err => {
-            console.log('[ERROR IN THE CONNECTION METHOD INVOCATION]');
+            console.log('[ERROR IN THE QUERY METHOD INVOCATION]');
             reject(err);
-        })
+        });
     });
-}; */
+};
 
 
 repository.logout = () => {
