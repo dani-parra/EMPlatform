@@ -9,4 +9,4 @@ var pool = mysql.createPool({
     database: process.env.DB_NAME
 });
 
-global.sharedFunctions.db.pool = pool;
+module.exports = pool;

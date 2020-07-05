@@ -17,5 +17,4 @@ functions.removeLastElements = (string, index) => {
     return string.substring(0,string.length - index);
 }
 
-global.sharedFunctions = {};
-global.sharedFunctions = functions;
+module.exports = functions;

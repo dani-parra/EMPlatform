@@ -1,11 +1,10 @@
 let repository = {};
 const bcrypt = require('bcrypt');
-const poolInstance = global.db.dbpools;
 const AuthenticationModel = require('../../../../../models/authentication');
 const jwt = require('../../../../../shared/shared');
 
 /** imports section */
-repository.validatePassword = (data) => {
+/* repository.validatePassword = (data) => {
     return new Promise((resolve, reject) => {
         db.getConnection(poolInstance).then(connection => {
             AuthenticationModel.validatePassword(connection, data.email).then(res => {
@@ -21,9 +20,8 @@ repository.validatePassword = (data) => {
             reject(err);
         })
     });
-};
+}; */
 
-module.exports = operations;
 
 repository.logout = () => {
     return new Promise((resolve, reject) => {

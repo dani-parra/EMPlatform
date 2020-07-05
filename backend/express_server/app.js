@@ -1,11 +1,18 @@
 const express = require('express');
-global.db.dbpools = require('./db/singletonPool');
 let app = express();
 
 //initialize shared functions
-require('./db/singletonPool');
-require('./shared/shared');
-require('./db/db');
+const sharedM = require('./shared/shared');
+const pool = require('./db/singletonPool');
+const DBMethods = require('./db/db');
+
+
+//set global elements
+global.shared = {
+    methods : sharedM,
+    db : DBMethods,
+    pool : pool
+};
 
 /** modules routes imports */
 const auth = require('./modules/authentication/src/auth/routes');

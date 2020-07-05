@@ -92,7 +92,7 @@ repository.update = (connection, data, release = true) => {
     });
 };
 
-operations.removeReward = (connection, data, release = true) => {
+repository.remove = (connection, data, release = true) => {
     return new Promise((resolve, reject) => {
         let query = statements.removeReward;
         let params = [];
