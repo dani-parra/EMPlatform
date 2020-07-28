@@ -3,23 +3,40 @@ const bcrypt = require('bcrypt');
 const AuthenticationModel = require('../models/authentication');
 
 /** imports section */
-repository.validatePassword = (connection, data) => {
+repository.login = (connection, data) => {
     return new Promise((resolve, reject) => {
-        AuthenticationModel.validatePassword(connection, data.email).then(res => {
-            bcrypt.compare(res, process.env.BCRYPT_HASH_SALT).then(res => {
-                jwt.generate()
+        connection.query({
+            sql: statements.getUserInfo,
+            timeout: process.env.QUERY_TIMEOUT
+        },
+            [data.email],
+            (err, result) => {
+                if (err) {
+                    reject(err);
+                }
+
+                bcrypt.compare(result.password, process.env.BCRYPT_HASH_SALT).then(res => {
+                    if (res === true) {
+                        let newJWT = global.shared.methods.generate();
+                        resolve(newJWT);
+                        return;
+                    }
+
+                    reject({
+                        error: "the provided password doesn't match"
+                    });
+                });
+            }).catch(err => {
+                console.log('[ERROR IN THE QUERY METHOD INVOCATION]');
+                reject(err);
             });
-        }).catch(err => {
-            console.log('[ERROR IN THE QUERY METHOD INVOCATION]');
-            reject(err);
-        });
     });
 };
 
 
 repository.logout = () => {
     return new Promise((resolve, reject) => {
-
+        
     });
 };
 

@@ -84,7 +84,7 @@ create table Sale(
     
 );
 
-/** table designed to register wich materials are used to make the extrusion process */
+/** table designed to create wich materials are used to make the extrusion process */
 create table Material(
 	materialId int(2) NOT NULL,
     description varchar(30),
@@ -92,7 +92,7 @@ create table Material(
     PRIMARY KEY(materialId)
 );
 
-/** table designed to register data about a working day */
+/** table designed to create data about a working day */
 create table Extrusion(
     id varchar(10) NOT NULL,
     extrusionDate date,
@@ -100,7 +100,7 @@ create table Extrusion(
     PRIMARY KEY(id)
 );
 
-/** table designed to register the amount of product made with the extrusion process in a day */
+/** table designed to create the amount of product made with the extrusion process in a day */
 create table PlasticRoll(
     id varchar(50) NOT NULL,
     weight varchar(5),
@@ -114,7 +114,7 @@ create table PlasticRoll(
     REFERENCES Extrusion(id)
 );
 
-/** table designed to register data about the clients related with the platform */
+/** table designed to create data about the clients related with the platform */
 create table EMClient(
     clientId varchar(30) NOT NULL,
     address varchar(60),

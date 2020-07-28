@@ -1,14 +1,14 @@
 let service = {};
+import { v4 as uuidv4 } from 'uuid';
 const repository = require('./implementation/implementation-interface');
 
-service.create = body => {
+service.create = (connection, body) => {
     return new Promise((resolve, reject) => {
 
-        // set the saleId
-        let id = `${body.productId}-${body.buyerId}-${new Date().getTime()}`
-        let newBody = {saleId : id, ...newBody};
+        let userId = uuidv4();
+        let newBody = {userId, ...body};
 
-        repository.create(newBody).then(res => {
+        repository.create(connection, newBody).then(res => {
             resolve(res);
         }).catch(err => {
             reject(err);
@@ -16,9 +16,9 @@ service.create = body => {
     });
 };
 
-service.update = body => {
+service.update = (connection, body) => {
     return new Promise((resolve, reject) => {
-        repository.update(body).then(res => {
+        repository.update(connection, body).then(res => {
             resolve(res);
         }).catch(err => {
             reject(err);
@@ -26,9 +26,9 @@ service.update = body => {
     });
 };
 
-service.get = body => {
+service.get = (connection, body) => {
     return new Promise((resolve, reject) => {
-        repository.get(body).then(res => {
+        repository.get(connection, body).then(res => {
             resolve(res);
         }).catch(err => {
             reject(err);
@@ -36,9 +36,9 @@ service.get = body => {
     });
 };
 
-service.delete = body => {
+service.delete = (connection, body) => {
     return new Promise((resolve, reject) => {
-        repository.delete(body).then(res => {
+        repository.delete(connection, body).then(res => {
             resolve(res);
         }).catch(err => {
             reject(err);

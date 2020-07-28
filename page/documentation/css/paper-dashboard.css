@@ -8413,7 +8413,7 @@ img {
     .modal-header .modal-profile i {
       font-size: 30px; }
 
-.modal-dialog.modal-sm .modal-header button.close, .modal-dialog.modal-register .modal-header button.close {
+.modal-dialog.modal-sm .modal-header button.close, .modal-dialog.modal-create .modal-header button.close {
   margin-top: 0; }
 
 .modal-content {
@@ -8456,11 +8456,11 @@ img {
   margin: 0px -3px;
   width: 1px; }
 
-.modal-register .modal-footer {
+.modal-create .modal-footer {
   text-align: center;
   margin-bottom: 25px;
   padding: 20px 0 15px; }
-  .modal-register .modal-footer span {
+  .modal-create .modal-footer span {
     width: 100%; }
 
 .carousel-item-next,
@@ -9868,69 +9868,69 @@ img {
 .full-page.pricing-page .description {
   margin-bottom: 65px; }
 
-.full-page.register-page .content > .container {
+.full-page.create-page .content > .container {
   margin-top: 5vh; }
 
-.full-page.register-page .info-horizontal {
+.full-page.create-page .info-horizontal {
   padding: 0px 0px 20px; }
 
-.full-page.register-page .info-horizontal {
+.full-page.create-page .info-horizontal {
   text-align: left !important; }
-  .full-page.register-page .info-horizontal .icon {
+  .full-page.create-page .info-horizontal .icon {
     margin-top: 0; }
-    .full-page.register-page .info-horizontal .icon > i {
+    .full-page.create-page .info-horizontal .icon > i {
       font-size: 2em; }
-    .full-page.register-page .info-horizontal .icon.icon-circle {
+    .full-page.create-page .info-horizontal .icon.icon-circle {
       width: 65px;
       height: 65px;
       max-width: 65px;
       margin-top: 8px; }
-      .full-page.register-page .info-horizontal .icon.icon-circle i {
+      .full-page.create-page .info-horizontal .icon.icon-circle i {
         display: table;
         margin: 0 auto;
         line-height: 3.5;
         font-size: 1.9em; }
-  .full-page.register-page .info-horizontal .description {
+  .full-page.create-page .info-horizontal .description {
     overflow: hidden; }
 
 .full-page.lock-page .content > .container {
   margin-top: 10vh; }
 
-.register-page .navbar .navbar-collapse .nav-item .nav-link,
+.create-page .navbar .navbar-collapse .nav-item .nav-link,
 .login-page .navbar .navbar-collapse .nav-item .nav-link,
 .lock-page .navbar .navbar-collapse .nav-item .nav-link {
   text-transform: capitalize;
   color: #FFFFFF !important; }
 
-.register-page .navbar.navbar-transparent,
+.create-page .navbar.navbar-transparent,
 .login-page .navbar.navbar-transparent,
 .lock-page .navbar.navbar-transparent {
   border-bottom: 1px solid transparent;
   margin-top: 25px; }
 
-.register-page .navbar .navbar-brand,
+.create-page .navbar .navbar-brand,
 .login-page .navbar .navbar-brand,
 .lock-page .navbar .navbar-brand {
   color: #FFFFFF !important; }
 
 @media screen and (max-width: 991px) {
-  .register-page .navbar.bg-white .navbar-toggler .navbar-toggler-bar.navbar-kebab,
+  .create-page .navbar.bg-white .navbar-toggler .navbar-toggler-bar.navbar-kebab,
   .login-page .navbar.bg-white .navbar-toggler .navbar-toggler-bar.navbar-kebab,
   .lock-page .navbar.bg-white .navbar-toggler .navbar-toggler-bar.navbar-kebab {
     background: #66615B !important; }
-  .register-page .navbar.bg-white .navbar-collapse .navbar-nav .nav-item .nav-link,
+  .create-page .navbar.bg-white .navbar-collapse .navbar-nav .nav-item .nav-link,
   .login-page .navbar.bg-white .navbar-collapse .navbar-nav .nav-item .nav-link,
   .lock-page .navbar.bg-white .navbar-collapse .navbar-nav .nav-item .nav-link {
     color: #66615B !important; }
-  .register-page .navbar.bg-white .navbar-brand,
+  .create-page .navbar.bg-white .navbar-brand,
   .login-page .navbar.bg-white .navbar-brand,
   .lock-page .navbar.bg-white .navbar-brand {
     color: #66615B !important; }
-  .register-page .navbar.navbar-transparent .navbar-toggle,
+  .create-page .navbar.navbar-transparent .navbar-toggle,
   .login-page .navbar.navbar-transparent .navbar-toggle,
   .lock-page .navbar.navbar-transparent .navbar-toggle {
     display: none; }
-  .register-page .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar.navbar-kebab,
+  .create-page .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar.navbar-kebab,
   .login-page .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar.navbar-kebab,
   .lock-page .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar.navbar-kebab {
     background: #FFFFFF !important; } }
@@ -10788,18 +10788,18 @@ img {
       width: 60px !important; }
   .login-page .navbar,
   .lock-page .navbar,
-  .register-page .navbar {
+  .create-page .navbar {
     padding: .5rem 1rem; }
   .footer .footer-nav,
   .footer .credits {
     margin: 0 auto !important; }
   .footer .footer-nav {
     margin-bottom: 10px !important; }
-  .register-page .content {
+  .create-page .content {
     padding-top: 5vh; }
-  .register-page .footer {
+  .create-page .footer {
     position: relative; }
-  .register-page .info-area.info-horizontal {
+  .create-page .info-area.info-horizontal {
     margin-top: 0; } }
 
 @media screen and (max-width: 374px) {

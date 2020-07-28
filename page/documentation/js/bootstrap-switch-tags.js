@@ -884,7 +884,7 @@
       if (beforeItemAddEvent.cancel)
         return;
 
-      // register item in internal array and map
+      // create item in internal array and map
       self.itemsArray.push(item);
 
       // add a tag element
@@ -1296,7 +1296,7 @@
   };
 
   /**
-   * Register JQuery plugin
+   * create JQuery plugin
    */
   $.fn.tagsinput = function(arg1, arg2, arg3) {
     var results = [];
